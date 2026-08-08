@@ -1,0 +1,20 @@
+{
+  "title": "ArthroHarm: deterministic extraction and evaluation of harms evidence in total knee arthroplasty randomized trials",
+  "upload_type": "software",
+  "description": "Frozen ArthroHarm v1.2 research software used to extract and evaluate structured harms evidence from full-text randomized-trial reports in total knee arthroplasty. This release includes exact evaluated code, rules, label-free publisher adapters, the automatic matcher and scorer, governance utilities, synthetic tests and cryptographic provenance. It does not redistribute publisher full texts and is not intended for autonomous or clinical use.",
+  "creators": [
+    {"name": "Zhang, Rui", "orcid": "0009-0000-3809-6413", "affiliation": "Qujing Central Hospital of Yunnan Province/Affiliated Qujing Hospital of Kunming Medical University"},
+    {"name": "Wang, Yun-fei", "orcid": "0009-0009-0265-6429", "affiliation": "First People's Hospital of Yunnan Province"},
+    {"name": "Liu, Feng", "affiliation": "Qujing Central Hospital of Yunnan Province/Affiliated Qujing Hospital of Kunming Medical University"},
+    {"name": "Yang, Xiong-gang", "affiliation": "First People's Hospital of Yunnan Province"},
+    {"name": "Zhu, Ting-biao", "affiliation": "Qujing Central Hospital of Yunnan Province/Affiliated Qujing Hospital of Kunming Medical University"},
+    {"name": "Qiu, Peng", "affiliation": "Qujing Central Hospital of Yunnan Province/Affiliated Qujing Hospital of Kunming Medical University"},
+    {"name": "Lu, Sheng", "orcid": "0000-0001-7532-8981", "affiliation": "First People's Hospital of Yunnan Province"}
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.2.0",
+  "publication_date": "2026-08-09",
+  "keywords": ["adverse events", "evidence synthesis", "information extraction", "randomized controlled trials", "total knee arthroplasty"]
+}
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+  <front>
+    <article-meta>
+      <title-group><article-title>Synthetic randomized trial report</article-title></title-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec>
+      <title>Results</title>
+      <p>No pulmonary embolism occurred in either group.</p>
+      <table-wrap>
+        <caption><p>Postoperative complications within 2 weeks</p></caption>
+        <table>
+          <thead><tr><th>Event</th><th>Intervention (n=20)</th><th>Control (n=20)</th><th>P value</th></tr></thead>
+          <tbody>
+            <tr><td>Deep vein thrombosis</td><td>1</td><td>2</td><td>0.55</td></tr>
+            <tr><td>Superficial infection</td><td>0</td><td>1</td><td>0.31</td></tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </sec>
+  </body>
+</article>

@@ -1,0 +1,9 @@
+name: arthroharm-v1.2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - lxml=6.0
+  - pdfplumber=0.11
+  - poppler
+

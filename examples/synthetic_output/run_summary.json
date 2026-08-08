@@ -1,0 +1,9 @@
+{
+  "rules_version": "ArthroHarm-v1.2-development-round3",
+  "run_mode": "development",
+  "development_only": true,
+  "xml_files": 1,
+  "predictions": 5,
+  "json_sha256": "e1424bc7fc38749f39edbe18150031dfa48c262d7e892b5b12b794df0d51d9a6",
+  "csv_sha256": "3fad29fa1b13d98578aac74999e7a09867e639732cde67a209a75b685e87478a"
+}

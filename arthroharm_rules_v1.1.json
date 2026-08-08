@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1",
+  "rules_version": "ArthroHarm-v1.1-RC1",
+  "base_rules_file": "arthroharm_rules_v1.0.json",
+  "development_date": "2026-08-06",
+  "prevalidation_development_scope": "Error-driven development on the original 20-article pilot only; this candidate has not yet been independently validated",
+  "body_allowed_section_patterns": [
+    "result", "finding", "adverse", "safety", "complication", "follow-up", "follow up"
+  ],
+  "body_excluded_section_patterns": [
+    "abstract", "introduction", "background", "method", "material", "protocol",
+    "discussion", "conclusion", "reference", "acknowledgement", "author contribution"
+  ],
+  "strong_occurrence_patterns": [
+    "reported", "occurred", "developed", "observed", "experienced", "suffered",
+    "underwent", "required", "was found", "were found", "incidence", "rate",
+    "adverse event", "adverse events", "complication", "complications",
+    "no patient", "no patients", "none", "zero", "without any"
+  ],
+  "non_event_patterns": [
+    "risk of", "history of", "defined as", "definition of", "to prevent", "prevention of",
+    "will be", "would be", "were excluded", "exclusion criteria", "eligibility criteria",
+    "previous studies", "previously reported", "literature", "hypothesis", "aim of"
+  ],
+  "zero_cell_tokens": ["-", "–", "—", "0", "0.0", "none", "nil", "no"],
+  "missing_cell_tokens": ["na", "n/a", "nr", "not reported", "not available"],
+  "arm_noise_patterns": ["p value", "p-value", "total", "overall", "time", "follow-up", "follow up"],
+  "additional_category_patterns": {
+    "Wound complication": ["wound oozing", "bullous skin eruption", "marginal skin necrosis", "wound related problems", "surgical site infection"],
+    "Thromboembolic disease": ["clinical venous thromboembolism", "clinical venous thromboembolisms"],
+    "Neural deficit": ["area of numbness", "motor block", "motor blockade"],
+    "Implant loosening": ["prosthesis loosening", "loosening"],
+    "Revision": ["prosthesis revised"],
+    "Other medical event": [
+      "pruritus", "diarrhea", "diarrhoea", "constipation", "dyspnea", "dyspnoea",
+      "low haemoglobin", "low hemoglobin", "postoperative ecchymosis", "blood transfusion",
+      "blood transfusions", "systemic toxicity", "palpitations", "falling down",
+      "hospital admittance", "cerebral event", "cardiovascular event", "cancer",
+      "mechanical problems with the prosthesis", "cutting", "knotting", "kinking", "dislodgement"
+    ]
+  },
+  "time_patterns_v1_1": [
+    "(?:postoperative|post-operative|postoperatively)\\s*(?:day|week|month|year)?\\s*\\d+",
+    "\\b\\d+(?:[-–]\\d+)?\\s*(?:hour|hours|hrs|h|day|days|week|weeks|month|months|year|years)\\b",
+    "\\b(?:pacu|perioperative|peri-operative|in-hospital|hospital stay)\\b",
+    "\\b(?:within|through|during|at|after|by)\\s+(?:the\\s+)?(?:first\\s+)?\\d+(?:[-–]\\d+)?\\s*(?:hour|hours|hrs|h|day|days|week|weeks|month|months|year|years)\\b"
+  ],
+  "quote_character_limit": 800
+}

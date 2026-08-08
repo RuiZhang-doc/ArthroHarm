@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.2",
+  "rules_version": "ArthroHarm-v1.2-development-round3",
+  "base_rules_file": "arthroharm_rules_v1.0.json",
+  "development_date": "2026-08-07",
+  "development_scope": "Error-driven development using the original 20-article pilot and the locked 60-article Stage I v1.1 errors; not v1.2 validation",
+  "body_allowed_section_patterns": [
+    "result", "finding", "adverse", "safety", "complication", "follow-up", "follow up"
+  ],
+  "body_excluded_section_patterns": [
+    "abstract", "introduction", "background", "method", "material", "protocol", "discussion", "conclusion", "reference", "acknowledgement", "author contribution"
+  ],
+  "strong_occurrence_patterns": [
+    "reported", "occurred", "developed", "observed", "experienced", "suffered", "underwent", "required", "was found", "were found", "incidence", "rate", "adverse event", "adverse events", "complication", "complications", "no patient", "no patients", "none", "zero", "without any", "there was no", "there were no", "had", "cases of", "case of", "readmitted", "was revised", "were revised", "detected", "encountered", "recorded", "signs of"
+  ],
+  "non_event_patterns": [
+    "risk of", "history of", "defined as", "definition of", "to prevent", "prevention of", "will be", "would be", "were excluded", "exclusion criteria", "eligibility criteria", "previous studies", "previously reported", "literature", "hypothesis", "aim of"
+  ],
+  "zero_cell_tokens": ["-", "–", "—", "0", "0.0", "none", "nil", "no"],
+  "missing_cell_tokens": ["na", "n/a", "nr", "not reported", "not available"],
+  "arm_noise_patterns": ["p value", "p-value", "total", "overall", "time", "follow-up", "follow up"],
+  "additional_category_patterns": {
+    "Wound complication": [
+      "wound oozing", "oozing wounds", "bullous skin eruption", "marginal skin necrosis", "wound related problems", "surgical site infection", "skin margin necrosis", "wound leakage", "deep tissue infection needing antibiotics"
+    ],
+    "Thromboembolic disease": [
+      "clinical venous thromboembolism", "clinical venous thromboembolisms", "symptomatic dvt", "symptomatic dvts", "symptomatic venous thromboembolism", "pulmonary embolus"
+    ],
+    "Neural deficit": [
+      "area of numbness", "motor block", "motor blockade", "lateral skin sensation deficit", "decreased limb muscle strength"
+    ],
+    "Implant loosening": ["prosthesis loosening", "loosening", "tibial component migration"],
+    "Revision": ["prosthesis revised", "tibial component revision", "polyethylene spacer exchange"],
+    "Reoperation": ["debridement and polyethylene exchange", "dair with polyethylene spacer exchange", "insert exchange"],
+    "Deep periprosthetic joint infection": ["acute prosthetic joint infection", "acute infection"],
+    "Other medical event": [
+      "pruritus", "diarrhea", "diarrhoea", "constipation", "dyspnea", "dyspnoea", "low haemoglobin", "low hemoglobin", "postoperative ecchymosis", "blood transfusion", "blood transfusions", "systemic toxicity", "palpitations", "falling down", "hospital admittance", "cerebral event", "cardiovascular event", "cancer", "mechanical problems with the prosthesis", "cutting", "knotting", "kinking", "dislodgement", "skin allergy", "cardiac infarction", "lymphedema", "malaise", "asthenia", "chest tightness", "postoperative delirium", "restlessness", "drowsiness", "unconsciousness", "catheter-associated infection", "liver injury"
+    ]
+  },
+  "unmappable_event_patterns": [
+    "wound ooze", "blistering", "blisters", "effusion", "major bleeding", "fatal bleeding", "severe bleeding", "hemarthrosis", "anterior knee pain", "flexion contracture", "recurvatum", "incisional infection", "radiolucent lines", "thromboembolic event", "subclavian vein thrombosis", "wound hematoma", "superficial ssi", "deep/organ-space ssi", "puncture site infection", "puncture site hematoma", "postoperative fall", "skin ulcer"
+  ],
+  "unclear_event_patterns": ["apparent side-effects", "other adverse event", "other adverse events", "other complications"],
+  "table_safety_context_patterns": [
+    "adverse event", "adverse effect", "side effect", "complication", "safety", "morbidity", "infection", "thrombo", "revision", "reoperation"
+  ],
+  "table_excluded_context_patterns_v1_2": [
+    "baseline", "demographic", "characteristic", "preoperative", "pre-operative", "comorbidity", "cost", "resource use", "resource utilization", "unit cost", "economic", "length of stay", "functional outcome", "score", "range of motion", "quality of life", "womac", "knee society", "oks", "vas", "mean difference", "quadriceps strength", "tug", "rom", "blood loss", "hemoglobin", "haemoglobin", "circumference"
+  ],
+  "table_non_event_row_patterns": [
+    "preoperative", "postoperative day", "postoperative week", "postoperative month", "follow-up", "follow up", "quadriceps strength", "range of motion", "tug", "score", "mean", "median", "length of stay", "blood loss", "hemoglobin", "haemoglobin", "circumference", "p value"
+  ],
+  "table_statistical_column_patterns": [
+    "p value", "p-value", "mean difference", "confidence interval", "95% ci", "versus", " vs ", "1v2", "1v3", "2v3"
+  ],
+  "time_patterns_v1_1": [
+    "(?:postoperative|post-operative|postoperatively)\\s*(?:day|days|week|weeks|month|months|year|years)?\\s*\\d+(?:[-–]\\d+)?",
+    "\\b\\d+(?:[-–]\\d+)?\\s*(?:hour|hours|hrs|h|day|days|week|weeks|month|months|year|years)\\b",
+    "\\b(?:pacu|perioperative|peri-operative|in-hospital|hospital stay|before discharge)\\b",
+    "\\b(?:within|through|during|at|after|by|to|up to)\\s+(?:the\\s+)?(?:first\\s+)?\\d+(?:[-–]\\d+)?\\s*(?:hour|hours|hrs|h|day|days|week|weeks|month|months|year|years)\\b"
+  ],
+  "quote_character_limit": 800
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "rules_version": "ArthroHarm-baseline-v1.0",
+  "frozen_date": "2026-08-06",
+  "scope": "Candidate harms evidence-unit extraction from PMC JATS XML of TKA randomized trial reports",
+  "development_status": "locked-rule retrospective pilot; not external validation",
+  "generic_reporting_cues": [
+    "adverse event", "adverse events", "adverse effect", "adverse effects",
+    "side effect", "side effects", "complication", "complications",
+    "well tolerated", "safety outcome", "safety outcomes", "serious adverse"
+  ],
+  "result_section_patterns": [
+    "result", "finding", "follow-up", "follow up", "complication", "adverse",
+    "safety", "outcome", "discussion", "conclusion"
+  ],
+  "reporting_patterns": [
+    "reported", "occurred", "developed", "observed", "experienced", "suffered",
+    "required", "underwent", "received", "withdrew", "withdrawn", "discontinued",
+    "died", "death", "no ", "none", "without", "zero", "well tolerated",
+    "was found", "were found", "incidence", "rate of"
+  ],
+  "exclusion_context_patterns": [
+    "exclusion criteria", "were excluded if", "patients were excluded", "history of",
+    "risk of", "to prevent", "prevention of", "defined as", "was defined as",
+    "will be recorded", "will be assessed", "will be monitored"
+  ],
+  "time_patterns": [
+    "(?:postoperative|post-operative|postoperatively)\\s*(?:day|week|month|year)?\\s*\\d+",
+    "\\d+\\s*(?:hour|hours|h|day|days|week|weeks|month|months|year|years)",
+    "(?:through|during|within|at|after|by)\\s+(?:the\\s+)?(?:first\\s+)?\\d+\\s*(?:hour|hours|h|day|days|week|weeks|month|months|year|years)",
+    "(?:perioperative|peri-operative|in-hospital|hospital stay|follow-up|follow up)"
+  ],
+  "categories": [
+    {"category":"Bleeding","rule_id":"CAT01","patterns":["haemorrhage","hemorrhage","bleeding complication","surgical bleeding"]},
+    {"category":"Wound complication","rule_id":"CAT02","patterns":["wound dehiscence","wound complication","wound drainage","wound necrosis","skin necrosis","blister","wound infection","superficial infection","incision infection"]},
+    {"category":"Thromboembolic disease","rule_id":"CAT03","patterns":["deep vein thrombosis","deep venous thrombosis","venous thromboembolism","pulmonary embolism","thromboembolism","dvt","pe "]},
+    {"category":"Neural deficit","rule_id":"CAT04","patterns":["nerve palsy","nerve injury","neural deficit","neuropathy","numbness","sensory deficit","motor deficit","foot drop","paralysis","paraesthesia","paresthesia"]},
+    {"category":"Vascular injury","rule_id":"CAT05","patterns":["vascular injury","arterial injury","artery injury","pseudoaneurysm"]},
+    {"category":"Medial collateral ligament injury","rule_id":"CAT06","patterns":["medial collateral ligament injury","mcl injury"]},
+    {"category":"Instability","rule_id":"CAT07","patterns":["instability","unstable knee"]},
+    {"category":"Malalignment","rule_id":"CAT08","patterns":["malalignment","malposition","incorrect component position"]},
+    {"category":"Stiffness","rule_id":"CAT09","patterns":["stiffness","arthrofibrosis","manipulation under anaesthesia","manipulation under anesthesia"]},
+    {"category":"Deep periprosthetic joint infection","rule_id":"CAT10","patterns":["deep infection","periprosthetic joint infection","prosthetic joint infection","pji"]},
+    {"category":"Fracture","rule_id":"CAT11","patterns":["periprosthetic fracture","intraoperative fracture","postoperative fracture","fracture"]},
+    {"category":"Extensor mechanism disruption","rule_id":"CAT12","patterns":["extensor mechanism disruption","patellar tendon rupture","quadriceps tendon rupture"]},
+    {"category":"Patellofemoral dislocation","rule_id":"CAT13","patterns":["patellar dislocation","patellofemoral dislocation"]},
+    {"category":"Tibiofemoral dislocation","rule_id":"CAT14","patterns":["tibiofemoral dislocation","knee dislocation"]},
+    {"category":"Bearing surface wear","rule_id":"CAT15","patterns":["bearing surface wear","polyethylene wear","insert wear"]},
+    {"category":"Osteolysis","rule_id":"CAT16","patterns":["osteolysis"]},
+    {"category":"Implant loosening","rule_id":"CAT17","patterns":["implant loosening","component loosening","prosthesis loosening","aseptic loosening","migration"]},
+    {"category":"Implant fracture / tibial insert dissociation","rule_id":"CAT18","patterns":["implant fracture","component fracture","insert dissociation","tibial insert dissociation"]},
+    {"category":"Reoperation","rule_id":"CAT19","patterns":["reoperation","re-operation","second surgery","additional surgery","return to theatre","return to theater"]},
+    {"category":"Revision","rule_id":"CAT20","patterns":["revision surgery","revision arthroplasty","revised knee","underwent revision","revision tka"]},
+    {"category":"Readmission","rule_id":"CAT21","patterns":["readmission","readmitted"]},
+    {"category":"Death","rule_id":"CAT22","patterns":["death","deaths","died","mortality"]},
+    {"category":"Other medical event","rule_id":"CAT23","patterns":[
+      "transfusion", "ecchymosis", "hematoma", "haematoma", "nausea", "vomiting",
+      "hypotension", "hypertension", "bradycardia", "tachycardia", "arrhythmia",
+      "qt interval", "urinary retention", "urinary tract infection", "pneumonia",
+      "myocardial infarction", "cardiac event", "stroke", "renal failure", "kidney injury",
+      "allergic reaction", "rash", "dizziness", "headache", "fever", "discomfort",
+      "catheter leakage", "leakage at the catheter", "catheter dislodgement", "drug reaction"
+    ]}
+  ],
+  "number_words": {"no":0,"none":0,"zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"ten":10},
+  "poolability": {
+    "direct": "numerator and denominator explicit, patient count unit, arm explicit, and time window explicit",
+    "transformable": "percentage explicit with denominator explicit but patient numerator not explicitly reported",
+    "not_poolable": "otherwise"
+  },
+  "deduplication": "article + location + normalized term + arm + numerator + denominator",
+  "quote_character_limit": 500
+}
